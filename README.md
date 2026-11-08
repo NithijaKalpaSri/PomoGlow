@@ -9,9 +9,27 @@
 A pastel glass Pomodoro timer for Windows with a profile that is truly yours.
 Native, tiny and fast: written in Rust.
 
+[![Download](https://img.shields.io/badge/Download-Pomoglow--Setup.exe-C4522F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/NithijaKalpaSri/PomoGlow/releases/tag/v0.2.0)
+[![Latest release](https://img.shields.io/github/v/release/NithijaKalpaSri/PomoGlow?style=for-the-badge&color=569680)](https://github.com/NithijaKalpaSri/PomoGlow/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-4C82C8?style=for-the-badge)](LICENSE)
+
 ![Pomoglow dashboard](docs/screenshots/01-dashboard-light.png)
 
 </div>
+
+## Download
+
+**[Download the latest installer (Pomoglow-Setup.exe)](https://github.com/NithijaKalpaSri/PomoGlow/releases/latest)**
+&nbsp;|&nbsp;
+[v0.2.0 release page](https://github.com/NithijaKalpaSri/PomoGlow/releases/tag/v0.2.0)
+
+1. Download **`Pomoglow-Setup.exe`** from the release's **Assets** section.
+2. Run it. It installs for your user account only, so no administrator rights are needed. It adds a Start Menu entry, an optional desktop shortcut and an uninstaller in Windows "Installed apps".
+3. Silent install: `Pomoglow-Setup.exe /S`
+
+Windows 10 / 11, 64-bit. The installer is about 2.8 MB. Windows SmartScreen may warn about an unsigned download the first time; choose "More info" then "Run anyway".
+
+Your profile and stats are stored in `%APPDATA%\Pomoglow\data.json`.
 
 ## Showcase
 
@@ -49,16 +67,6 @@ A big, transparent, click-through clock that floats on top of every window (VS C
 - **Always-on-top pin**, countdown in the window title and tray tooltip
 - **Tiny**: about 5 MB app, 2.8 MB installer, no runtime needed
 
-## Download and install
-
-1. Download **`Pomoglow-Setup.exe`** from the Releases page (or build it yourself, see below).
-2. Run it. It installs for your user account only, so no administrator rights are needed. It adds a Start Menu entry, an optional desktop shortcut and an uninstaller in Windows "Installed apps".
-3. Silent install: `Pomoglow-Setup.exe /S`
-
-A portable `pomoglow.exe` (no install) is also available. Windows SmartScreen may warn about an unsigned download the first time; choose "More info" then "Run anyway".
-
-Your profile and stats are stored in `%APPDATA%\Pomoglow\data.json`.
-
 ## Using the overlay clock
 
 1. Open **Clock Styles** in the sidebar and scroll to **Transparent overlay**.
@@ -69,7 +77,7 @@ The main window must stay running (you can hide it to the tray) because it drive
 
 ## Build from source
 
-Requirements: Windows 10/11, [Rust](https://rustup.rs) (stable). For the installer you also need Python 3 (used only to compress the exe).
+Requirements: Windows 10/11 and [Rust](https://rustup.rs) (stable). To build the installer you also need Python 3 (used only to compress the exe).
 
 ```powershell
 # run in debug
@@ -105,10 +113,6 @@ cargo build --release
 
 Rust, [egui / eframe](https://github.com/emilk/egui) (glow backend), `tray-icon`, `windows-sys`, `serde`.
 
-## Website
-
-The matching website and in-browser web app (React + Vite) live in the [PomoGlow-web](https://github.com/NithijaKalpaSri/PomoGlow-web-) repository.
-
 ## License
 
-Add your license here (for example MIT).
+This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 NithijaKalpaSri.
